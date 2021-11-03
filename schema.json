@@ -1,0 +1,235 @@
+{
+    "$schema" : "",
+    "id" : "",
+    "title" : "message",
+    "description" : "This schema is an assessment for python engineer trainer",
+    "items" : {
+        "type" : "object",
+        "properties" : {
+            "basic" : {
+                "description" : "This is an object that contain basic information about participant",
+                "type" : "object",
+                "properties" : {
+                    "id": {
+                        "description" : "Unique identification number of the basic",
+                        "type" : "string"
+                    },
+                    "name" : {
+                        "description" : "This represent the name of the person",
+                        "type" : "string"
+                    },
+                    "orientation" : {
+                        "description" : "Orientation",
+                        "type" : "string"
+                    },
+                    "setting": {
+                        "description" : "This contain configurations about the participation",
+                        "type" : "object",
+                        "properties" : {
+                            "minParticipants": {
+                                "description" : "least number of participants",
+                                "type" : "integer"
+                            },
+                            "maxParticipants": {
+                                "description" : "maximum number of participants",
+                                "type" : "integer"
+                            },
+                            "battleType": {
+                                "description" : "Type of battle",
+                                "type" : "string"
+                            },
+                            "wagerType": {
+                                "description" : "wager type",
+                                "type" : "string"
+                            },
+                            "countdown": {
+                                "description" : "countdown of the assessment",
+                                "type" : "integer"
+                            },
+                            "duration": {
+                                "description" : "Time allocated for the assessment",
+                                "type" : "integer"
+                            },
+                            "archetype": {
+                                "description" : "describing the archtype",
+                                "type" : "object",
+                                "properties" : {
+                                    "iconId" : {
+                                        "description" : "identity of the arch type",
+                                        "type" : "string"
+                                    },
+                                    "name" : {
+                                        "description" : "name of the arch type",
+                                        "type" : "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "status" : {
+                        "description" : "status of the assessment",
+                        "type" : "string"
+                    },
+                    "creationTime": {
+                        "description" : "Time which assessment was created",
+                        "type" : "integer"
+                    },
+                    "startTime": {
+                        "description" : "start time of the assessment",
+                        "type" : "integer"
+                    },
+                    "endTime": {
+                        "description" : "Deadline for the assessment",
+                        "type" : "integer"
+                    },
+                    "creator" : {
+                        "description" : "about creator",
+                        "type" : "object",
+                        "properties" : {
+                            "id": {
+                                "description" : "creator id",
+                                "type" : "integer"
+                            },
+                            "nickname": {
+                                "description" : "alias of the creator",
+                                "type" : "string"
+                            },
+                            "title": {
+                                "description" : "title of the creator",
+                                "type" : "string"
+                            },
+                            "accountType": {
+                                "description" : "account type",
+                                "type" : "string"
+                            },
+                            "countryCode": {
+                                "description" : "The code of the creator country",
+                                "type" : "string"
+                            },
+                            "orientation": {
+                                "description" : "orientation",
+                                "type" : "string"
+                            }
+                        }
+                    },
+                    "tag" : {
+                        "description" : "A tag describing the basic",
+                        "type" : "string"
+                            }
+                },
+                "required": false               
+            },
+                    "participants" : {
+                        "description" : "Provide detail about the participants",
+                        "type" : "array",
+                        "properties" : {
+                            "user" : {
+                                "description" : "User details  for det",
+                                "type" : "object",
+                                "properties" : {
+                                    "id" : {
+                                        "description" : "id no of the user",
+                                        "type" : "string"
+                                    },
+                                    "nickname" : {
+                                        "description" : "alais of the user paticipant",
+                                        "type" : "string"
+                                    },
+                                    "title" : {
+                                        "description" : "Title of the participant",
+                                        "type" : "string"
+                                    },
+                                    "account_type" : {
+                                        "description" : "account type",
+                                        "type" : "string"
+                                    },
+                                    "countryCode" : {
+                                        "description" : "The code of the partipant's country",
+                                        "type" : "string"
+                                    },
+                                    "orientation" : {
+                                        "description" : "Orientation",
+                                        "type" : "string"
+                                    }                                                  
+                                }
+                            },
+                            "creator" : {
+                                "description" : "check of its a creator",
+                                "type" : "boolean"                        
+                            },
+                            "ranking" : {
+                                "description" : "ranking of the participant",
+                                "type" : "integer"
+                            },
+                            "numberOfTrades" : {
+                                "description" : "number of description",
+                                "type" : "integer"
+                            },
+                            "performance" : {
+                                "description" : "performance of the participant",
+                                "type" : "string"
+                            },
+                            "tag" : {
+                                "description" : "tag of the participant",
+                                "type" : "enum",
+                                "item" : {
+                                    "type" : "string"
+                                },
+                                "minItems": 1,
+                                "uniqueItems": true
+                            }
+                        },
+                        "required": false 
+                    },
+                    "joiner" : {
+                        "description" : "Provide detail about the joining participants",
+                        "type" : "object",
+                        "properties" : {
+                                "id" : {
+                                    "description" : "id no of the joiner",
+                                    "type" : "string"
+                                },
+                                "nickname" : {
+                                    "description" : "alais of the joining paticipant",
+                                    "type" : "string"
+                                },
+                                "title" : {
+                                    "description" : "Title of the joiner",
+                                    "type" : "string"
+                                },
+                                "account_type" : {
+                                    "description" : "account type",
+                                    "type" : "string"
+                                },
+                                "countryCode" : {
+                                    "description" : "The code of the partipant's country",
+                                    "type" : "string"
+                                },
+                            "orientation" : {
+                                    "description" : "Orientation",
+                                    "type" : "string"
+                                },
+                                "tag" : {
+                                    "description" : "tag of the joiner",
+                                    "type" : "enum",
+                                    "items" : {
+                                        "type" : "string"
+                                    },
+                                    "minItems": 1,
+                                    "uniqueItems": true
+                                }
+                            },
+                            "required": false                               
+                        },
+                        "participantIds" : {
+                            "description" : "Ids of all participants",
+                            "type" : "object",
+                            "items" :{
+                                "type" : "enum"
+                            }
+                        }
+
+
+            }
+    }
+}
