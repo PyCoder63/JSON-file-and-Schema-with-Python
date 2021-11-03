@@ -1,6 +1,15 @@
 This document contains all supporting instructions to run the project successfully.
 
-In the available dependencies, there is a virtual environment named "myvenv". Always activate the myvenv before procceeding with any other thing. With the myvenv, you don't need to pip install any supported module before running the project. You will want to install python on your computer and python interpreter for VS code user 
+You will want to install python on your computer and python interpreter for VS code user. 
+Download the repository files in one folder. And then install a virtual environment and activate it. 
+
+To run the codes, there is need to setup virtual environment advisablly in the directory containing same as the files of this project and activate it. 
+Then install the json and jsonschema modules all with the virtual environment activated in the same working directory.
+
+------modules to install---------------------
+Install virtual environment: "python -m virtualenv virtulenvname". 
+Install json module: "pip install json"
+Install jsnschema: "pip install jsonschema"
 
 Recommend: The main.py and schema.json files can be access using any support editor but i will recommend using VS Code since it can work with entire directory in one workspace.
 
@@ -10,11 +19,12 @@ Recommend: The main.py and schema.json files can be access using any support edi
 3. Activate the virtual environment "myvenv". To activate,
 	for windows: .\myvenv\Scripts\activate
 	for Linux: source myvenv/bin/activate
-4. Load the main.py file and run the program
+4 Install json and jsonschema modules
+4. Load the main.py and run the program
 
 ------Files in the directory-----------------
 1. .vscode
-2. myvenv
+2. myvenv(virtual environment)
 3. main.py
 4. schema.json
 5. similar data.json
